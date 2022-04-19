@@ -1,0 +1,41 @@
+@use "../utils/box_shadow.scss";
+@use "../utils/move.scss";
+.tuto {
+    counter-reset: section;
+    & ol {
+        display: flex;
+        gap: 20px;
+        @media screen and(max-width: 990px) {
+            flex-direction: column;
+        }
+    }
+    & li {
+        position: relative;
+        &::before {
+            content: counter(section);
+            counter-increment: section;
+            background: #9356dc;
+            color: #f6f6f6;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            position: absolute;
+            left: -12px;
+            bottom: 12px;
+        }
+        background-color: #f6f6f6;
+        padding: 15px 25px;
+        flex-grow: 1;
+        border-radius: 10px;
+        list-style-type: none;
+        @include box_shadow.base-shadow;
+        &:hover {
+            @include move.move-touch;
+        }
+    }
+    & i.fa-solid {
+        margin-right: 10px;
+    }
+}

@@ -12,6 +12,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+main {
+  padding: 0 10px;
+}
+
 header {
   font-family: "Shrikhand", cursive;
   text-align: center;
@@ -20,8 +24,7 @@ header {
   position: relative;
 }
 
-/* *************************** ADDRESS *****************************************/
-main .address {
+.address {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,7 +33,6 @@ main .address {
   padding: 16px;
   margin-bottom: 40px;
 }
-
 .address__text {
   font-weight: 500;
 }
@@ -39,22 +41,17 @@ main .address {
   font-size: 20px;
 }
 
-/* ******************************* EXPLORER *************************************/
 .explorer {
   text-align: center;
 }
-
 .explorer h2 {
   font-size: 20px;
   font-weight: 500;
 }
-
 .explorer p {
   font-size: 15px;
   font-weight: 200;
 }
-
-/* ***************************** EXPLORER BUTTON *******************/
 .explorer button {
   border: 0;
   padding: 10px 20px;
@@ -63,14 +60,55 @@ main .address {
   border-radius: 100px;
   color: #fff;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
   transition: transform 200ms;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.explorer button:hover {
+  transform: scale(1.01);
+  opacity: 0.9;
 }
 
-.explorer button:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
+.tuto {
+  counter-reset: section;
+}
+.tuto ol {
+  display: flex;
+  gap: 20px;
+}
+@media screen and (max-width: 990px) {
+  .tuto ol {
+    flex-direction: column;
+  }
+}
+.tuto li {
+  position: relative;
+  background-color: #f6f6f6;
+  padding: 15px 25px;
+  flex-grow: 1;
+  border-radius: 10px;
+  list-style-type: none;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.tuto li::before {
+  content: counter(section);
+  counter-increment: section;
+  background: #9356dc;
+  color: #f6f6f6;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: absolute;
+  left: -12px;
+  bottom: 12px;
+}
+.tuto li:hover {
+  transform: scale(1.01);
+}
+.tuto i.fa-solid {
+  margin-right: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */

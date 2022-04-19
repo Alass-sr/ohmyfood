@@ -1,0 +1,30 @@
+@use "../utils/box_shadow.scss";
+@use "../utils/move.scss";
+
+.explorer {
+    text-align: center;
+    & h2 {
+        font-size: 20px;
+        font-weight: 500;
+    }
+    & p {
+    font-size: 15px;
+    font-weight: 200;
+}
+& button {
+ border: 0;
+ padding: 10px 20px;
+ font-weight: 600;
+ font-size: 17px;
+ border-radius: 100px;
+ color: #fff;
+ background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+ cursor: pointer;
+ transition: transform 200ms;
+ @include box_shadow.base-shadow;
+} 
+& button:hover {
+ @include move.move-touch;
+ opacity: 0.9;
+}
+} 
