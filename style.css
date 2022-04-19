@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap');
+
 *, 
 ::before,
 ::after {
@@ -49,4 +50,20 @@ main .address {
     font-size: 15px;
     font-weight: 200;
 }
-/* ***************************** EXPLORER BUTTON */
+/* ***************************** EXPLORER BUTTON *******************/
+.explorer button {
+    border: 0;
+    padding: 10px 20px;
+    font-weight: 600;
+    font-size: 17px;
+    border-radius: 100px;
+    color: #fff;
+    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    cursor: pointer;
+    transition: transform 200ms;
+} 
+.explorer button:hover {
+    transform: scale(1.02);
+    opacity: 0.9;
+}

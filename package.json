@@ -1,0 +1,23 @@
+{
+  "name": "sarr_alassane_n3_ohmyfood",
+  "version": "1.0.0",
+  "description": "Openclassrooms 3 ohMyFood",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alass-sr/ohmyfood.git"
+  },
+  "author": "\"Sarr Alassane\"",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alass-sr/ohmyfood/issues"
+  },
+  "homepage": "https://github.com/Alass-sr/ohmyfood#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "sass": "^1.50.1"
+  }
+}
