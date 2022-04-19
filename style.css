@@ -9,6 +9,7 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -16,4 +17,36 @@ header {
     text-align: center;
     box-shadow: 0 0 0.5rem rgb(0 0 0 / 25%);
     padding: 5px;
+    position: relative;
 }
+/* *************************** ADDRESS *****************************************/
+main .address {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background-color: #f3f3f3;
+    padding: 16px;
+    margin-bottom: 40px;
+}
+
+.address__text {
+    font-weight: 500;
+}
+.fa-solid.fa-location-dot {
+    font-size: 20px;
+}
+
+/* ******************************* EXPLORER *************************************/
+.explorer {
+   text-align: center;
+}
+.explorer h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+.explorer p {
+    font-size: 15px;
+    font-weight: 200;
+}
+/* ***************************** EXPLORER BUTTON */
