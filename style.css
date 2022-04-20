@@ -8,12 +8,16 @@
 
 body {
   margin: 0;
-  padding: 0;
   font-family: "Roboto", sans-serif;
 }
 
 main {
   padding: 0 10px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
@@ -30,7 +34,8 @@ header {
   justify-content: center;
   gap: 15px;
   background-color: #f3f3f3;
-  padding: 16px;
+  padding: 20px;
+  font-size: 20px;
   margin-bottom: 40px;
 }
 .address__text {
@@ -43,10 +48,11 @@ header {
 
 .explorer {
   text-align: center;
+  background-color: #fafafa;
 }
 .explorer h2 {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 22px;
+  font-weight: bold;
 }
 .explorer p {
   font-size: 15px;
@@ -72,6 +78,13 @@ header {
 .tuto {
   counter-reset: section;
 }
+.tuto .container {
+  max-width: 1280px;
+  margin: auto;
+}
+.tuto h2 {
+  margin-left: 30px;
+}
 .tuto ol {
   display: flex;
   gap: 20px;
@@ -84,7 +97,7 @@ header {
 .tuto li {
   position: relative;
   background-color: #f6f6f6;
-  padding: 15px 25px;
+  padding: 25px 25px;
   flex-grow: 1;
   border-radius: 10px;
   list-style-type: none;
@@ -102,13 +115,56 @@ header {
   place-items: center;
   position: absolute;
   left: -12px;
-  bottom: 12px;
+  bottom: 21px;
 }
 .tuto li:hover {
   transform: scale(1.01);
 }
 .tuto i.fa-solid {
   margin-right: 10px;
+  color: #7e7e7e;
+  font-size: 15px;
+}
+.tuto span {
+  font-weight: 300;
+}
+
+.menus {
+  background-color: #fafafa;
+}
+.menus .container {
+  max-width: 1280px;
+  margin: auto;
+}
+.menus h2 {
+  margin-left: 30px;
+}
+.menus .menus_card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+@media screen and (max-width: 990px) {
+  .menus .menus_card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.menus .card__image {
+  height: 250px;
+  background-size: cover;
+  border-radius: 1rem 1rem 0 0;
+}
+.menus .card__image-1 {
+  background-image: url("../../images/restaurants/menu-1.jpg");
+}
+.menus .card__image-2 {
+  background-image: url("../../images/restaurants/menu-2.jpg");
+}
+.menus .card__image-3 {
+  background-image: url("../../images/restaurants/menu-3.jpg");
+}
+.menus .card__image-4 {
+  background-image: url("../../images/restaurants/menu-4.jpg");
 }
 
 /*# sourceMappingURL=style.css.map */
