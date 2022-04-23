@@ -6,22 +6,59 @@
         margin: auto;
     }
     & h2 {
-        margin-left: 30px;
+        padding: 40px 20px 0;
     }
     .menus_card {
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 20px;
-        @media screen and(max-width: 990px) {
+        & a {
+            background-color: #fff;
+            border-radius: 25px;
+            margin: auto;
+            width: 90%;
+        }
+       
+        @media screen and(max-width: 992px) {
             grid-template-columns: repeat(1, 1fr);
+        }
+        .new {
+            background-color: #99e2d0;
+            color: #1b6150;
+            padding: 0.5rem;
+            border-radius: 0.125rem;
+            position: absolute;
+            top: 1rem;
+            right: 0.75rem;
         }
     }
     .card {
         &__image {
-            height: 250px;
+            height: 220px;
             background-size: cover;
             border-radius: 1rem 1rem 0 0;
+            border: 0 solid transparent;
+            position: relative;
         }
+        &__description {
+            display: flex;
+            align-items: center;
+            padding: 20px 15px;
+            .content {
+                flex: 1;           
+            }
+            & h3 {
+                margin: 0 0 0.25rem;
+            }
+            & p {
+                margin: 0;
+                font-weight: 300;
+            }
+            .fa-regular.fa-heart {
+                font-size: 25px;
+            }
+        }
+        
         @for $i from 1 through 4 {
             &__image-#{$i} {
                 background-image: url("../../images/restaurants/menu-#{$i}.jpg");

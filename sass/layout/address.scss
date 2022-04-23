@@ -4,13 +4,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 20px;
     background-color: colors.$lightgrey2;
-    padding: 20px;
-    font-size: 20px;
-    margin-bottom: 40px;
+    padding: 15px;
+    font-size: 18px;
+    // margin-bottom: 28px;
     &__text {
-        font-weight: 500;
+        font-weight: 400;
     }
 }
 

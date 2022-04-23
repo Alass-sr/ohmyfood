@@ -11,10 +11,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-main {
-  padding: 0 10px;
-}
-
 a {
   text-decoration: none;
   color: inherit;
@@ -28,18 +24,21 @@ header {
   position: relative;
 }
 
+h1 {
+  margin: 5px;
+}
+
 .address {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 15px;
+  gap: 20px;
   background-color: #f3f3f3;
-  padding: 20px;
-  font-size: 20px;
-  margin-bottom: 40px;
+  padding: 15px;
+  font-size: 18px;
 }
 .address__text {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .fa-solid.fa-location-dot {
@@ -49,20 +48,21 @@ header {
 .explorer {
   text-align: center;
   background-color: #fafafa;
+  padding: 20px;
 }
 .explorer h2 {
   font-size: 22px;
   font-weight: bold;
 }
 .explorer p {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 200;
 }
 .explorer button {
-  border: 0;
-  padding: 10px 20px;
+  padding: 15px 15px;
   font-weight: 600;
-  font-size: 17px;
+  margin: 14px 10px 30px;
+  font-size: 14px;
   border-radius: 100px;
   color: #fff;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
@@ -83,13 +83,14 @@ header {
   margin: auto;
 }
 .tuto h2 {
-  margin-left: 30px;
+  padding: 20px 20px 0;
 }
 .tuto ol {
   display: flex;
   gap: 20px;
+  padding: 20px 25px 50px;
 }
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 992px) {
   .tuto ol {
     flex-direction: column;
   }
@@ -97,7 +98,7 @@ header {
 .tuto li {
   position: relative;
   background-color: #f6f6f6;
-  padding: 25px 25px;
+  padding: 25px 32px;
   flex-grow: 1;
   border-radius: 10px;
   list-style-type: none;
@@ -123,10 +124,11 @@ header {
 .tuto i.fa-solid {
   margin-right: 10px;
   color: #7e7e7e;
-  font-size: 15px;
+  font-size: 18px;
 }
 .tuto span {
-  font-weight: 300;
+  font-weight: 500;
+  margin-left: 10px;
 }
 
 .menus {
@@ -137,22 +139,57 @@ header {
   margin: auto;
 }
 .menus h2 {
-  margin-left: 30px;
+  padding: 40px 20px 0;
 }
 .menus .menus_card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-@media screen and (max-width: 990px) {
+.menus .menus_card a {
+  background-color: #fff;
+  border-radius: 25px;
+  margin: auto;
+  width: 90%;
+}
+@media screen and (max-width: 992px) {
   .menus .menus_card {
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.menus .menus_card .new {
+  background-color: #99e2d0;
+  color: #1b6150;
+  padding: 0.5rem;
+  border-radius: 0.125rem;
+  position: absolute;
+  top: 1rem;
+  right: 0.75rem;
+}
 .menus .card__image {
-  height: 250px;
+  height: 220px;
   background-size: cover;
   border-radius: 1rem 1rem 0 0;
+  border: 0 solid transparent;
+  position: relative;
+}
+.menus .card__description {
+  display: flex;
+  align-items: center;
+  padding: 20px 15px;
+}
+.menus .card__description .content {
+  flex: 1;
+}
+.menus .card__description h3 {
+  margin: 0 0 0.25rem;
+}
+.menus .card__description p {
+  margin: 0;
+  font-weight: 300;
+}
+.menus .card__description .fa-regular.fa-heart {
+  font-size: 25px;
 }
 .menus .card__image-1 {
   background-image: url("../../images/restaurants/menu-1.jpg");

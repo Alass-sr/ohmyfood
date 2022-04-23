@@ -8,13 +8,14 @@
         margin: auto;
     }
     & h2 {
-        margin-left: 30px;
+        padding: 20px 20px 0;
     }
     counter-reset: section;
     & ol {
         display: flex;
         gap: 20px;
-        @media screen and(max-width: 990px) {
+        padding: 20px 25px 50px;
+        @media screen and(max-width: 992px) {
             flex-direction: column;
         }
     }
@@ -35,7 +36,7 @@
             bottom: 21px;
         }
         background-color: colors.$white;
-        padding: 25px 25px;
+        padding: 25px 32px;
         flex-grow: 1;
         border-radius: 10px;
         list-style-type: none;
@@ -47,10 +48,11 @@
     & i.fa-solid {
         margin-right: 10px;
         color: colors.$grey;
-        font-size: 15px;
+        font-size: 18px;
     }
     & span {
-        font-weight: 300;
+        font-weight: 500;
+        margin-left: 10px;
     }
 
 }
