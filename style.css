@@ -204,4 +204,28 @@ h1 {
   background-image: url("../../images/restaurants/menu-4.jpg");
 }
 
+footer {
+  background-color: #353535;
+  color: white;
+}
+footer .container {
+  padding: 5px;
+}
+footer .title {
+  font-family: "Shrikhand", "sans-serif";
+  font-weight: 400;
+  font-size: 20px;
+  padding: 1px 20px;
+}
+footer ul {
+  list-style-type: none;
+  padding: 5px 20px;
+}
+footer li {
+  margin: 7px;
+}
+footer .fa-solid {
+  margin-right: 5px;
+}
+
 /*# sourceMappingURL=style.css.map */

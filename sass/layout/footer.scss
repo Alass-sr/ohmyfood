@@ -1,0 +1,29 @@
+@use "../utils/colors.scss";
+
+
+footer {
+    background-color: colors.$blackgrey;
+    color: white;
+    .container {
+        padding: 5px;
+    }
+    .title {
+        font-family: "Shrikhand", "sans-serif";
+        font-weight: 400;
+        font-size: 20px;
+        padding: 5px 20px;
+       
+    }
+    ul {
+        list-style-type: none;
+        padding: 5px 20px;
+    }
+    & li {
+        margin: 7px;
+    }
+    .fa-solid {
+        margin-right: 5px;
+    }
+ }
+    
+    
