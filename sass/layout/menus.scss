@@ -1,17 +1,21 @@
 @use "../utils/colors.scss";
+@use "../utils/mixins.scss";
+
 .menus {
     background-color: colors.$lightgrey;
+    padding: 20px 5px;
     & .container {
         max-width: 1280px;
         margin: auto;
     }
     & h2 {
-        padding: 40px 20px 0;
+        padding: 0px 20px;
     }
     .menus_card {
         display: grid;
         grid-template-columns: repeat(2,1fr);
         gap: 20px;
+        
         & a {
             background-color: #fff;
             border-radius: 25px;
@@ -33,6 +37,7 @@
         }
     }
     .card {
+        padding: 20px 5px;
         &__image {
             height: 220px;
             background-size: cover;
@@ -40,29 +45,19 @@
             border: 0 solid transparent;
             position: relative;
         }
-        &__description {
-            display: flex;
-            align-items: center;
-            padding: 20px 15px;
-            .content {
-                flex: 1;           
-            }
-            & h3 {
-                margin: 0 0 0.25rem;
-            }
-            & p {
-                margin: 0;
-                font-weight: 300;
-            }
-            .fa-regular.fa-heart {
-                font-size: 25px;
-            }
-        }
         
         @for $i from 1 through 4 {
             &__image-#{$i} {
                 background-image: url("../../images/restaurants/menu-#{$i}.jpg");
             }
+        }
+        &__description {
+            @include mixins.animated-heart;
+            h3,
+            P {
+                margin: 5px 15px;
+            }
+            
         }
     }
 }

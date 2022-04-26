@@ -1,5 +1,4 @@
-@use "../utils/box_shadow.scss";
-@use "../utils/move.scss";
+@use "../utils/mixins.scss";
 @use "../utils/colors.scss";
 
 .tuto {
@@ -40,9 +39,9 @@
         flex-grow: 1;
         border-radius: 10px;
         list-style-type: none;
-        @include box_shadow.base-shadow;
+        @include mixins.base-shadow;
         &:hover {
-            @include move.move-touch;
+            @include mixins.move-touch;
         }
     }
     & i.fa-solid {
