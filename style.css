@@ -191,7 +191,6 @@ h1 {
 }
 .menus .card__description {
   position: relative;
-  background-color: white;
   font-family: "Shrikhand", "sans-serif";
 }
 .menus .card__description::before {
@@ -271,16 +270,29 @@ footer .fa-solid {
   margin-right: 5px;
 }
 
-img {
+.banner img {
   width: 100%;
+  object-fit: cover;
+  margin-bottom: -60px;
 }
 
-main h2 {
-  position: relative;
-  background-color: white;
-  font-family: "Shrikhand", "sans-serif";
+h1 {
+  font-weight: 200;
 }
-main h2::before {
+
+main {
+  position: relative;
+  margin: auto;
+  background-color: #fafafa;
+  border-radius: 20px 20px 0 0;
+}
+main .first-menu {
+  font-family: "Shrikhand", "sans-serif";
+  position: relative;
+  font-family: "Shrikhand", "sans-serif";
+  padding: 5px 20px;
+}
+main .first-menu::before {
   display: inline-block;
   font-size: normal;
   font-variant: normal;
@@ -300,7 +312,7 @@ main h2::before {
   transform: all 0.25s;
   font-weight: 5;
 }
-main h2::after {
+main .first-menu::after {
   display: inline-block;
   font-size: normal;
   font-variant: normal;
@@ -324,9 +336,27 @@ main h2::after {
   color: transparent;
   font-weight: 900;
 }
-main h2:hover::after {
+main .first-menu:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.05);
+}
+main .container-submenus {
+  padding: 0 20px;
+}
+main .container-submenus .submenu__title {
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 0.5rem;
+  font-weight: 400;
+}
+main .container-submenus .submenu__title::after {
+  content: "";
+  width: 3rem;
+  height: 0.25rem;
+  background-color: #99e2d0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

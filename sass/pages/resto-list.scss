@@ -1,8 +1,50 @@
 @use "../utils/mixins.scss";
-img {
-    width: 100%;
+@use "../utils/colors.scss";
+
+
+.banner {
+    & img {
+        width: 100%;
+        object-fit: cover;
+        margin-bottom: -60px;
+    }
 }
 
-main h2 {
-    @include mixins.animated-heart;
+h1 {
+    font-weight: 200;
 }
+
+main {
+     position: relative;
+     margin: auto;
+     background-color: colors.$lightgrey;
+     border-radius: 20px 20px 0 0;
+    .first-menu {
+         font-family: "Shrikhand", "sans-serif";    
+         @include mixins.animated-heart;
+         padding: 5px 20px;      
+    }
+
+    .container-submenus {
+        padding: 0 20px;
+        .submenu__title {
+        text-transform: uppercase;
+        position: relative;
+        padding-bottom: 0.5rem;
+        font-weight: 400;
+        
+        }
+        .submenu__title::after {
+            content: "";
+            width: 3rem;
+            height: 0.25rem;
+            background-color: colors.$button;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+    
+        
+    }
+}
+    

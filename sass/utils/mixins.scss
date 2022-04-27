@@ -33,7 +33,7 @@
 
 @mixin animated-heart {
     position: relative;
-    background-color: white;
+    
     font-family: "Shrikhand","sans-serif";
     &::before {
         @include descriptionbody;
