@@ -17,21 +17,42 @@ h1 {
 main {
      position: relative;
      margin: auto;
-     background-color: colors.$lightgrey;
+     background-color: colors.$lightgrey2;
      border-radius: 20px 20px 0 0;
+     max-width: 1280px;
+    
+     }
+
+     
     .first-menu {
          font-family: "Shrikhand", "sans-serif";    
          @include mixins.animated-heart;
-         padding: 5px 20px;      
+         padding: 5px 20px;
+    }
+    .first-menu::before,
+    .first-menu::after {
+        right: 2.5rem;
+        font-size: 30px;
     }
 
     .container-submenus {
+        gap: 20px;
         padding: 0 20px;
+
+        @media screen and(min-width: 992px) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);          
+        
+        }
+        .submenu {
+            max-width: 100%;
+            overflow: hidden;
+        }
         .submenu__title {
         text-transform: uppercase;
         position: relative;
         padding-bottom: 0.5rem;
-        font-weight: 400;
+        font-weight: 400;      
         
         }
         .submenu__title::after {
@@ -43,8 +64,53 @@ main {
             left: 0;
             bottom: 0;
         }
-    
+        .menuItem {
+            display: flex;
+            background-color: #fff;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
+  
+
+            .menuIten__choice {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                
+                flex: 1;
+                    & h4, p {
+                         margin: 0;                        
+                }
+            }
+            .menuItem__price {
+                display: flex;
+                align-items: end;
+                font-weight: 500;
+            }
+            .menuItem__confirmation {
+                border: 1px solid black;
+            }
+        }        
+    }
+    .container-btn {
+        display: flex;
+        justify-content: center;
+        padding: 3rem 0;
+        .btn__command {
+            border-radius: 100px;
+            padding: 0.75rem 1.5rem;
+            border: 0;
+            background-image: linear-gradient(0deg,rgba(147,86,220,.9),
+            rgba(255,121,218,.9));
+            color: colors.$white;
+            font-size: 1.1rem;
+            box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+            cursor: pointer;
+        }
+
         
     }
-}
+
     

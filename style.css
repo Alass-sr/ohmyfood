@@ -283,16 +283,18 @@ h1 {
 main {
   position: relative;
   margin: auto;
-  background-color: #fafafa;
+  background-color: #f3f3f3;
   border-radius: 20px 20px 0 0;
+  max-width: 1280px;
 }
-main .first-menu {
+
+.first-menu {
   font-family: "Shrikhand", "sans-serif";
   position: relative;
   font-family: "Shrikhand", "sans-serif";
   padding: 5px 20px;
 }
-main .first-menu::before {
+.first-menu::before {
   display: inline-block;
   font-size: normal;
   font-variant: normal;
@@ -312,7 +314,7 @@ main .first-menu::before {
   transform: all 0.25s;
   font-weight: 5;
 }
-main .first-menu::after {
+.first-menu::after {
   display: inline-block;
   font-size: normal;
   font-variant: normal;
@@ -336,20 +338,38 @@ main .first-menu::after {
   color: transparent;
   font-weight: 900;
 }
-main .first-menu:hover::after {
+.first-menu:hover::after {
   opacity: 1;
   transform: translateY(-50%) scale(1.05);
 }
-main .container-submenus {
+
+.first-menu::before,
+.first-menu::after {
+  right: 2.5rem;
+  font-size: 30px;
+}
+
+.container-submenus {
+  gap: 20px;
   padding: 0 20px;
 }
-main .container-submenus .submenu__title {
+@media screen and (min-width: 992px) {
+  .container-submenus {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.container-submenus .submenu {
+  max-width: 100%;
+  overflow: hidden;
+}
+.container-submenus .submenu__title {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 0.5rem;
   font-weight: 400;
 }
-main .container-submenus .submenu__title::after {
+.container-submenus .submenu__title::after {
   content: "";
   width: 3rem;
   height: 0.25rem;
@@ -357,6 +377,48 @@ main .container-submenus .submenu__title::after {
   position: absolute;
   left: 0;
   bottom: 0;
+}
+.container-submenus .menuItem {
+  display: flex;
+  background-color: #fff;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+}
+.container-submenus .menuItem .menuIten__choice {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  flex: 1;
+}
+.container-submenus .menuItem .menuIten__choice h4, .container-submenus .menuItem .menuIten__choice p {
+  margin: 0;
+}
+.container-submenus .menuItem .menuItem__price {
+  display: flex;
+  align-items: end;
+  font-weight: 500;
+}
+.container-submenus .menuItem .menuItem__confirmation {
+  border: 1px solid black;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
+}
+.container-btn .btn__command {
+  border-radius: 100px;
+  padding: 0.75rem 1.5rem;
+  border: 0;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  color: #f6f6f6;
+  font-size: 1.1rem;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
