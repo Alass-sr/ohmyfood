@@ -7,6 +7,8 @@
         width: 100%;
         object-fit: cover;
         margin-bottom: -60px;
+        max-width: 100%;
+        max-height: 32rem;
     }
 }
 
@@ -64,33 +66,67 @@ main {
             left: 0;
             bottom: 0;
         }
-        .menuItem {
-            display: flex;
+        .menuItem {         
             background-color: #fff;
             border-radius: 0.75rem;
             cursor: pointer;
-            padding: 20px;
+            // padding: 15px;
             margin: 20px 0;
             box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
   
 
-            .menuIten__choice {
-                white-space: nowrap;
+            .menuItem__choice {
+                display: flex;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                
-                flex: 1;
-                    & h4, p {
-                         margin: 0;                        
+                      
+                .menuItem__description {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden; 
+                    padding: 15px;
+                    & h4 {
+                        margin: 0;
+                    }
                 }
-            }
-            .menuItem__price {
-                display: flex;
-                align-items: end;
-                font-weight: 500;
-            }
-            .menuItem__confirmation {
-                border: 1px solid black;
+                .menuItem__price {
+                    margin-left: auto;
+                    font-weight: 500;
+                    display: flex;
+                    align-items: end;
+                    padding: 15px;
+                }
+                .menuItem__check {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #99e2d0;
+                    margin-right: -4rem;
+                    width: 4rem;
+                    border-radius: 0 10px 10px 0;
+                    transition: margin-right 0.5s ;
+                    & i {
+                        background-color: white;
+                            border-radius: 50%;
+                            width: 25px;
+                            height: 25px;
+                            display: grid;
+                            place-items: center;
+                            color: #99e2d0;;
+                    }
+                }
+        
+                
+                &:hover 
+                    .menuItem__check {
+                    margin-right: 0;
+                    i {
+                        
+                        @include mixins.quartermove;
+                        animation: quartermove 1s ease-in-out;
+    
+                    }
+                }
             }
         }        
     }
@@ -99,15 +135,8 @@ main {
         justify-content: center;
         padding: 3rem 0;
         .btn__command {
-            border-radius: 100px;
-            padding: 0.75rem 1.5rem;
-            border: 0;
-            background-image: linear-gradient(0deg,rgba(147,86,220,.9),
-            rgba(255,121,218,.9));
+            @include mixins.buttonbottom;
             color: colors.$white;
-            font-size: 1.1rem;
-            box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
-            cursor: pointer;
         }
 
         

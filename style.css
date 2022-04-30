@@ -59,6 +59,7 @@ h1 {
   font-weight: 200;
 }
 .explorer button {
+  border: 0;
   padding: 15px 15px;
   font-weight: 600;
   margin: 14px 10px 30px;
@@ -274,6 +275,8 @@ footer .fa-solid {
   width: 100%;
   object-fit: cover;
   margin-bottom: -60px;
+  max-width: 100%;
+  max-height: 32rem;
 }
 
 h1 {
@@ -379,30 +382,65 @@ main {
   bottom: 0;
 }
 .container-submenus .menuItem {
-  display: flex;
   background-color: #fff;
   border-radius: 0.75rem;
   cursor: pointer;
-  padding: 20px;
   margin: 20px 0;
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
 }
-.container-submenus .menuItem .menuIten__choice {
+.container-submenus .menuItem .menuItem__choice {
+  display: flex;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.container-submenus .menuItem .menuItem__choice .menuItem__description {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
-  flex: 1;
+  padding: 15px;
 }
-.container-submenus .menuItem .menuIten__choice h4, .container-submenus .menuItem .menuIten__choice p {
+.container-submenus .menuItem .menuItem__choice .menuItem__description h4 {
   margin: 0;
 }
-.container-submenus .menuItem .menuItem__price {
+.container-submenus .menuItem .menuItem__choice .menuItem__price {
+  margin-left: auto;
+  font-weight: 500;
   display: flex;
   align-items: end;
-  font-weight: 500;
+  padding: 15px;
 }
-.container-submenus .menuItem .menuItem__confirmation {
-  border: 1px solid black;
+.container-submenus .menuItem .menuItem__choice .menuItem__check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #99e2d0;
+  margin-right: -4rem;
+  width: 4rem;
+  border-radius: 0 10px 10px 0;
+  transition: margin-right 0.5s;
+}
+.container-submenus .menuItem .menuItem__choice .menuItem__check i {
+  background-color: white;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  color: #99e2d0;
+}
+.container-submenus .menuItem .menuItem__choice:hover .menuItem__check {
+  margin-right: 0;
+}
+.container-submenus .menuItem .menuItem__choice:hover .menuItem__check i {
+  animation: quartermove 1s ease-in-out;
+}
+@keyframes quartermove {
+  0% {
+    transform: rotate(-120deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 .container-btn {
@@ -411,14 +449,17 @@ main {
   padding: 3rem 0;
 }
 .container-btn .btn__command {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 0;
   border-radius: 100px;
   padding: 0.75rem 1.5rem;
   border: 0;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  color: #f6f6f6;
   font-size: 1.1rem;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
+  color: #f6f6f6;
 }
 
 /*# sourceMappingURL=style.css.map */
