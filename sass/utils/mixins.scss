@@ -11,14 +11,19 @@
 }
 
 @mixin arrow {
-    display: inline-block;
-    font-size: normal;
-    font-variant: normal;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    font-family: "Font Awesome 5 free";
-    font-weight: 900;
-
+    .fa-solid.fa-arrow-left {
+        display: flex;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 1.2rem;
+        color: #000;
+        left: 2rem;
+        height: 2rem;
+        width: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
 }
 @mixin descriptionbody {
     display: inline-block;
