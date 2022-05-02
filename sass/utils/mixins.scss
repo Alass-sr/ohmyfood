@@ -7,9 +7,19 @@
 }
 
 @mixin move-touch {
-    transform: scale(1.01);
+    transform: scale(1.02);
 }
 
+@mixin arrow {
+    display: inline-block;
+    font-size: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 free";
+    font-weight: 900;
+
+}
 @mixin descriptionbody {
     display: inline-block;
     font-size: normal;
