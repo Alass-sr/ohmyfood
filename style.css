@@ -96,6 +96,44 @@ h1 {
   opacity: 0.9;
 }
 
+.loader {
+  position: fixed;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  height: 100vh;
+  inset: 0;
+  z-index: 1;
+  opacity: 0.9;
+  transform-origin: right;
+  animation: loader-spinner 200ms 5s forwards;
+  animation-delay: 3s;
+}
+.loader::before {
+  content: "";
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-right: 5px solid #9356dc;
+  border-left: 5px solid transparent;
+  animation: spinner-rotate 5s infinite linear;
+  animation-iteration-count: 2;
+}
+
+@keyframes loader-spinner {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 .tuto {
   counter-reset: section;
 }
@@ -141,6 +179,10 @@ h1 {
 }
 .tuto li:hover {
   transform: scale(1.02);
+  background-color: #f2eafb;
+}
+.tuto li:hover i::before {
+  color: #9356dc;
 }
 .tuto i.fa-solid {
   margin-right: 10px;
@@ -216,7 +258,6 @@ h1 {
 }
 .menus .card__description::before {
   display: inline-block;
-  font-size: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -231,12 +272,10 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: all 0.25s;
   font-weight: 5;
 }
 .menus .card__description::after {
   display: inline-block;
-  font-size: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -251,7 +290,6 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: all 0.25s;
   font-weight: 5;
   background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
   opacity: 0;
@@ -328,7 +366,6 @@ main {
 }
 .first-menu::before {
   display: inline-block;
-  font-size: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -343,12 +380,10 @@ main {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: all 0.25s;
   font-weight: 5;
 }
 .first-menu::after {
   display: inline-block;
-  font-size: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -363,7 +398,6 @@ main {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: all 0.25s;
   font-weight: 5;
   background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
   opacity: 0;
@@ -418,6 +452,9 @@ main {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   animation-fill-mode: both;
   animation: move-item 2s;
+  animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 .container-submenus .menuItem:nth-child(1) {
   animation-delay: 300ms;
@@ -533,7 +570,6 @@ main {
 }
 .first-menu::before {
   display: inline-block;
-  font-size: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -548,12 +584,10 @@ main {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: all 0.25s;
   font-weight: 5;
 }
 .first-menu::after {
   display: inline-block;
-  font-size: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -568,7 +602,6 @@ main {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: all 0.25s;
   font-weight: 5;
   background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
   opacity: 0;
@@ -727,7 +760,6 @@ main {
 }
 .first-menu::before {
   display: inline-block;
-  font-size: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -742,12 +774,10 @@ main {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: all 0.25s;
   font-weight: 5;
 }
 .first-menu::after {
   display: inline-block;
-  font-size: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -762,7 +792,6 @@ main {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: all 0.25s;
   font-weight: 5;
   background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
   opacity: 0;
@@ -921,7 +950,6 @@ main {
 }
 .first-menu::before {
   display: inline-block;
-  font-size: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -936,12 +964,10 @@ main {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: all 0.25s;
   font-weight: 5;
 }
 .first-menu::after {
   display: inline-block;
-  font-size: normal;
   font-variant: normal;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -956,7 +982,6 @@ main {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 1;
-  transform: all 0.25s;
   font-weight: 5;
   background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
   opacity: 0;

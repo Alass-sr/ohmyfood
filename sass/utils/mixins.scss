@@ -27,7 +27,7 @@
 }
 @mixin descriptionbody {
     display: inline-block;
-    font-size: normal;
+    // font-size: normal;
     font-variant: normal;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
@@ -42,7 +42,7 @@
     background-clip: text;
     -webkit-background-clip: text;
     opacity: 1;
-    transform: all .25s ;
+    // transform: all 1s;
     font-weight: 5
 }
 

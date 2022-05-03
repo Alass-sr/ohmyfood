@@ -81,6 +81,7 @@ main {
                     animation-delay: 300ms * $i;
                     
                 }
+                animation-fill-mode: both;
                 
             }
             
