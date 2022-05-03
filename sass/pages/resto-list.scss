@@ -1,6 +1,6 @@
 @use "../utils/mixins.scss";
 @use "../utils/colors.scss";
-
+@use "../utils/animation.scss";
 
 
 .banner {
@@ -50,6 +50,7 @@ main {
         .submenu {
             max-width: 100%;
             overflow: hidden;
+            
         }
         .submenu__title {
         text-transform: uppercase;
@@ -71,21 +72,29 @@ main {
             background-color: #fff;
             border-radius: 0.75rem;
             cursor: pointer;
-            // padding: 15px;
             margin: 20px 0;
             box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
-  
-
+            animation-fill-mode: both;
+            animation: move-item 2s;
+            @for $i from 1 through 3 {
+                &:nth-child(#{$i}) {
+                    animation-delay: 300ms * $i;
+                    
+                }
+                
+            }
+            
             .menuItem__choice {
                 display: flex;
                 text-overflow: ellipsis;
                 overflow: hidden;
-                      
+                
                 .menuItem__description {
                     white-space: nowrap;
                     text-overflow: ellipsis;
                     overflow: hidden; 
                     padding: 15px;
+               
                     & h4 {
                         margin: 0;
                     }
