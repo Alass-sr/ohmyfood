@@ -7,3 +7,18 @@
     }
     
 }
+
+@keyframes loader-spinner {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(0);
+    }
+}
+ 
+@keyframes spinner-rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}

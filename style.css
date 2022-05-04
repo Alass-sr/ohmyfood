@@ -121,19 +121,6 @@ h1 {
   animation-iteration-count: 2;
 }
 
-@keyframes loader-spinner {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(0);
-  }
-}
-@keyframes spinner-rotate {
-  to {
-    transform: rotate(360deg);
-  }
-}
 .tuto {
   counter-reset: section;
 }
@@ -207,7 +194,7 @@ h1 {
 }
 .menus .menus_card {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   gap: 20px;
 }
 .menus .menus_card a {
@@ -216,9 +203,9 @@ h1 {
   margin: auto;
   width: 90%;
 }
-@media screen and (max-width: 992px) {
+@media screen and (min-width: 992px) {
   .menus .menus_card {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 .menus .menus_card .new {
@@ -336,6 +323,19 @@ footer .fa-solid {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes loader-spinner {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+@keyframes spinner-rotate {
+  to {
+    transform: rotate(360deg);
   }
 }
 .banner img {
