@@ -74,11 +74,12 @@ main {
             cursor: pointer;
             margin: 20px 0;
             box-shadow: 0.25rem 0.25rem 1rem rgb(0 0 0 / 10%);
-            animation-fill-mode: both;
-            animation: move-item 2s;
+            animation: move-item 2s ease-out;
+
             @for $i from 1 through 3 {
-                &:nth-child(#{$i}) {
-                    animation-delay: 300ms * $i;
+                &:div:nth-of-type(#{i}) {
+                    animation-fill-mode: both;
+                    animation-delay: 600ms * $i;
                     
                 }
                 
